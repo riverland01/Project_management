@@ -17,3 +17,7 @@ Use these templates when creating new workspace-level files, new projects, or de
 - `dependencies-active.md`
 - `dependencies-dependency-map.md`
 
+## Project Scaffold
+
+- `project-template/` - copy this folder to `projects/<project-name>/` when starting a new project.
+
