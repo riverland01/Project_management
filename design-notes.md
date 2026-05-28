@@ -11,7 +11,9 @@ The structure balances four goals:
 - Support multiple projects with cross-project dependencies.
 - Stay compatible with Markdown-based project management views such as Kanban boards, Gantt charts, and timelines.
 
-## Final Template
+## Target Structure
+
+The full target structure is:
 
 ```text
 workspace-root/
@@ -166,6 +168,8 @@ workspace-root/
       analysis/
 ```
 
+The current scaffold includes the required root files, `dependencies/`, `projects/`, `templates/`, and `templates/project-template/`. Workspace-level `views/` and `shared/` are intentionally deferred until they become useful.
+
 ## Why This Structure
 
 The starting idea came from a Markdown-first project memory workflow: keep project instructions, tasks, decisions, blockers, schedules, sources, and review history in plain Markdown so both humans and agents can inspect and update the project state.
@@ -299,6 +303,7 @@ Important files:
 - `dependencies/active.md` lists current cross-project dependencies.
 - `dependencies/dependency-map.md` can show the overall relationship map, often with Mermaid.
 - `dependencies/by-project/` stores one dependency view per project.
+- `dependencies/archived/` stores resolved or obsolete cross-project dependency records.
 - `projects/*/dependencies.md` gives the local dependency view inside each project.
 
 This makes dependencies visible without forcing every project to load every other project.
@@ -351,6 +356,8 @@ High-priority templates:
 - `templates/dependencies-dependency-map.md`
 
 Use these templates when creating new workspace-level files, new project overlay files, or cross-project dependency files. When applying a template to an existing project, preserve useful existing content and add only the sections that improve clarity.
+
+For a brand-new project, prefer copying `templates/project-template/` to `projects/<project-name>/` and then replacing placeholders. The scaffold includes the standard current-state files plus lightweight README or placeholder files in nested folders so the intended structure is trackable and self-documenting.
 
 ## Ingestion Templates
 
@@ -410,7 +417,9 @@ Then add detail folders only when the project needs them.
 The intended workflow is:
 
 1. Check workspace `STATUS.md` and `INDEX.md`.
-2. Open the relevant project folder.
-3. Read that project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
-4. Load deeper files only when the task requires them.
-5. Update current-state files and append detailed history to the appropriate folder.
+2. Check `dependencies/active.md` when work may affect multiple projects.
+3. Open the relevant project folder.
+4. Read that project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
+5. Read the project's `dependencies.md` when dependencies may affect the answer or update.
+6. Load deeper files only when the task requires them.
+7. Update current-state files and append detailed history to the appropriate folder.
