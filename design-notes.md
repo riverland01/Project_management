@@ -42,6 +42,40 @@ workspace-root/
     reusable-prompts.md
 
   templates/
+    README.md
+    workspace-README.md
+    workspace-STATUS.md
+    workspace-INDEX.md
+    project-README.md
+    project-STATUS.md
+    project-TASKS.md
+    project-INDEX.md
+    project-dependencies.md
+    dependencies-active.md
+    dependencies-dependency-map.md
+    ingestion/
+      README.md
+      meeting-note.md
+      project-initiation.md
+      email-thread.md
+      ppt-deck.md
+      source-summary.md
+      decision-record.md
+      blocker-record.md
+      feedback-record.md
+    reporting/
+      README.md
+      project-status-report.md
+      portfolio-status-report.md
+      dashboard.md
+      cross-project-kanban.md
+      cross-project-gantt.md
+      project-kanban.md
+      project-gantt.md
+      roadmap.md
+      milestones.md
+      risks.md
+      open-questions.md
     project-template/
       README.md
       STATUS.md
@@ -298,6 +332,64 @@ Project-level examples:
 These files can support Markdown-based tools such as Obsidian Kanban, Mermaid Gantt diagrams, Markwhen timelines, or later export into GitHub Issues and Projects.
 
 The canonical task data should remain in `TASKS.md`. The `views/` files are for visual organization.
+
+## High-Priority Templates
+
+The `templates/` folder contains reusable Markdown templates for files that agents and humans will create or update repeatedly.
+
+High-priority templates:
+
+- `templates/workspace-README.md`
+- `templates/workspace-STATUS.md`
+- `templates/workspace-INDEX.md`
+- `templates/project-README.md`
+- `templates/project-STATUS.md`
+- `templates/project-TASKS.md`
+- `templates/project-INDEX.md`
+- `templates/project-dependencies.md`
+- `templates/dependencies-active.md`
+- `templates/dependencies-dependency-map.md`
+
+Use these templates when creating new workspace-level files, new project overlay files, or cross-project dependency files. When applying a template to an existing project, preserve useful existing content and add only the sections that improve clarity.
+
+## Ingestion Templates
+
+The `templates/ingestion/` folder contains templates for turning incoming source material into project memory.
+
+Ingestion templates:
+
+- `templates/ingestion/meeting-note.md`
+- `templates/ingestion/project-initiation.md`
+- `templates/ingestion/email-thread.md`
+- `templates/ingestion/ppt-deck.md`
+- `templates/ingestion/source-summary.md`
+- `templates/ingestion/decision-record.md`
+- `templates/ingestion/blocker-record.md`
+- `templates/ingestion/feedback-record.md`
+
+These templates should be used when a user provides meeting notes, project initiation material, email threads, PowerPoint decks, PDFs, Word documents, or other source files for ingestion.
+
+Some source types, especially email threads and PowerPoint decks, may not fit cleanly into a fixed structure. For those sources, use the closest ingestion template as a guide rather than a rigid form. Preserve the original file where possible, summarize the operational implications, and keep source-specific context in a flexible notes section.
+
+## Reporting Templates
+
+The `templates/reporting/` folder contains templates for project status reports, portfolio summaries, dashboards, visual views, roadmaps, milestone summaries, risk summaries, and open-question lists.
+
+Reporting templates:
+
+- `templates/reporting/project-status-report.md`
+- `templates/reporting/portfolio-status-report.md`
+- `templates/reporting/dashboard.md`
+- `templates/reporting/cross-project-kanban.md`
+- `templates/reporting/cross-project-gantt.md`
+- `templates/reporting/project-kanban.md`
+- `templates/reporting/project-gantt.md`
+- `templates/reporting/roadmap.md`
+- `templates/reporting/milestones.md`
+- `templates/reporting/risks.md`
+- `templates/reporting/open-questions.md`
+
+Use these templates when a user asks for the status of one or more projects, a portfolio report, a dashboard, or an optional visual project-management view. Reporting files should summarize and link back to source Markdown files. They should not become the canonical source for tasks, dependencies, decisions, or project state.
 
 ## Operating Principle
 
