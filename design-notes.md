@@ -22,6 +22,7 @@ workspace-root/
   CLAUDE.md
   INDEX.md
   STATUS.md
+  glossary.md
 
   views/
     dashboard.md
@@ -39,7 +40,6 @@ workspace-root/
 
   shared/
     styleguide.md
-    glossary.md
     contacts.md
     reusable-prompts.md
 
@@ -48,10 +48,12 @@ workspace-root/
     workspace-README.md
     workspace-STATUS.md
     workspace-INDEX.md
+    workspace-glossary.md
     project-README.md
     project-STATUS.md
     project-TASKS.md
     project-INDEX.md
+    project-glossary.md
     project-dependencies.md
     dependencies-active.md
     dependencies-dependency-map.md
@@ -83,6 +85,7 @@ workspace-root/
       STATUS.md
       TASKS.md
       INDEX.md
+      glossary.md
       dependencies.md
       planning/
       docs/
@@ -98,6 +101,7 @@ workspace-root/
       STATUS.md
       TASKS.md
       INDEX.md
+      glossary.md
       dependencies.md
 
       views/
@@ -158,6 +162,7 @@ workspace-root/
       STATUS.md
       TASKS.md
       INDEX.md
+      glossary.md
       dependencies.md
       views/
       planning/
@@ -168,7 +173,7 @@ workspace-root/
       analysis/
 ```
 
-The current scaffold includes the required root files, `dependencies/`, `projects/`, `templates/`, and `templates/project-template/`. Workspace-level `views/` and `shared/` are intentionally deferred until they become useful.
+The current scaffold includes the required root files, including root `glossary.md`, plus `dependencies/`, `projects/`, `templates/`, and `templates/project-template/`. Workspace-level `views/` and `shared/` are intentionally deferred until they become useful.
 
 ## Why This Structure
 
@@ -190,6 +195,7 @@ Top-level files describe the whole workspace:
 - `README.md` explains the workspace.
 - `INDEX.md` maps active projects and important folders.
 - `STATUS.md` summarizes the current portfolio-level situation.
+- `glossary.md` defines workspace-wide terms, acronyms, aliases, and phrases.
 - `AGENTS.md` gives global working rules.
 
 Each project gets its own local state:
@@ -198,6 +204,7 @@ Each project gets its own local state:
 - `STATUS.md` for current project state.
 - `TASKS.md` for active and near-future tasks.
 - `INDEX.md` for project navigation.
+- `glossary.md` for project-specific terms, acronyms, aliases, and phrase meanings.
 - `dependencies.md` for local dependency notes.
 
 This lets Codex load only the current project files instead of scanning every project.
@@ -211,6 +218,7 @@ Short current-state files:
 - `STATUS.md`
 - `TASKS.md`
 - `INDEX.md`
+- `glossary.md`
 
 Historical or detailed material is split into folders:
 
@@ -239,6 +247,7 @@ README.md
 STATUS.md
 TASKS.md
 INDEX.md
+glossary.md
 dependencies.md
 ```
 
@@ -308,6 +317,16 @@ Important files:
 
 This makes dependencies visible without forcing every project to load every other project.
 
+## Glossaries
+
+The workspace includes glossary files so humans and agents can interpret terms, acronyms, aliases, and phrases consistently.
+
+Use root `glossary.md` for terms that have the same meaning across the workspace.
+
+Use `projects/<project>/glossary.md` for terms that are specific to a single project.
+
+Glossary entries should stay concise and include common synonyms or alternate phrases when they help agents connect source material to canonical project language.
+
 ## Analysis Work
 
 Each project includes an `analysis/` folder because some projects may need analysis PowerPoints or supporting outputs.
@@ -347,10 +366,12 @@ High-priority templates:
 - `templates/workspace-README.md`
 - `templates/workspace-STATUS.md`
 - `templates/workspace-INDEX.md`
+- `templates/workspace-glossary.md`
 - `templates/project-README.md`
 - `templates/project-STATUS.md`
 - `templates/project-TASKS.md`
 - `templates/project-INDEX.md`
+- `templates/project-glossary.md`
 - `templates/project-dependencies.md`
 - `templates/dependencies-active.md`
 - `templates/dependencies-dependency-map.md`
@@ -409,6 +430,7 @@ README.md
 STATUS.md
 TASKS.md
 INDEX.md
+glossary.md
 dependencies.md
 ```
 
@@ -420,6 +442,7 @@ The intended workflow is:
 2. Check `dependencies/active.md` when work may affect multiple projects.
 3. Open the relevant project folder.
 4. Read that project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
-5. Read the project's `dependencies.md` when dependencies may affect the answer or update.
-6. Load deeper files only when the task requires them.
-7. Update current-state files and append detailed history to the appropriate folder.
+5. Read root or project `glossary.md` when terminology, acronyms, aliases, or phrase meanings matter.
+6. Read the project's `dependencies.md` when dependencies may affect the answer or update.
+7. Load deeper files only when the task requires them.
+8. Update current-state files and append detailed history to the appropriate folder.

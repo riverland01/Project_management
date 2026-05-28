@@ -4,7 +4,7 @@ Last updated: 2026-05-28
 
 ## Overall Status
 
-The workspace structure has been initialized with root current-state files, dependency tracking, a project container, and a reusable project template scaffold. No active projects have been added yet.
+The workspace structure has been initialized with root current-state files, glossary support, dependency tracking, a project container, and a reusable project template scaffold. No active projects have been added yet.
 
 ## Active Projects
 
@@ -32,3 +32,4 @@ The workspace structure has been initialized with root current-state files, depe
 ## Notes
 
 - Use `templates/project-template/` when creating new project folders.
+- Use root `glossary.md` for workspace-wide terminology and project `glossary.md` files for project-specific terms.

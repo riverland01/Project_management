@@ -5,7 +5,7 @@ Project-specific folders live here.
 ## Adding A Project
 
 1. Copy `templates/project-template/` into `projects/<project-name>/`.
-2. Replace placeholders in the copied `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, and `dependencies.md`.
+2. Replace placeholders in the copied `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, `glossary.md`, and `dependencies.md`.
 3. Update root `STATUS.md` and `INDEX.md`.
 4. Add cross-project dependencies to `dependencies/active.md` when needed.
 

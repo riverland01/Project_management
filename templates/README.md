@@ -9,15 +9,17 @@ Use these templates when creating new workspace-level files, new projects, or de
 - `workspace-README.md`
 - `workspace-STATUS.md`
 - `workspace-INDEX.md`
+- `workspace-glossary.md`
 - `project-README.md`
 - `project-STATUS.md`
 - `project-TASKS.md`
 - `project-INDEX.md`
+- `project-glossary.md`
 - `project-dependencies.md`
 - `dependencies-active.md`
 - `dependencies-dependency-map.md`
 
 ## Project Scaffold
 
-- `project-template/` - copy this folder to `projects/<project-name>/` when starting a new project.
+- `project-template/` - copy this folder to `projects/<project-name>/` when starting a new project; it includes a project-level `glossary.md`.
 

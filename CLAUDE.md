@@ -5,14 +5,17 @@ This workspace uses `AGENTS.md` as the canonical instruction file for agent beha
 Claude Code should read and follow:
 
 - `AGENTS.md` - global workspace and project-management rules
-- `STATUS.md` - portfolio-level current state, if present
-- `INDEX.md` - workspace map, if present
+- `STATUS.md` - portfolio-level current state
+- `INDEX.md` - workspace map
+- `glossary.md` - workspace-wide terms, acronyms, aliases, and phrase meanings
+- `dependencies/active.md` - current cross-project dependencies
 
 When working inside a project, Claude Code should then read:
 
 - `projects/<project>/STATUS.md`
 - `projects/<project>/TASKS.md`
 - `projects/<project>/INDEX.md`
+- `projects/<project>/glossary.md`
 - `projects/<project>/dependencies.md`
 
 Use templates from:

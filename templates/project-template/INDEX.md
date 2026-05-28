@@ -7,6 +7,7 @@ Last updated: YYYY-MM-DD
 - `README.md` - project overview
 - `STATUS.md` - current project state
 - `TASKS.md` - active and near-future tasks
+- `glossary.md` - project-specific terminology and aliases
 - `dependencies.md` - local dependency notes
 
 ## Planning

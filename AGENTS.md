@@ -12,6 +12,7 @@ Before working, orient yourself using:
 
 - `STATUS.md` - current portfolio-level status
 - `INDEX.md` - map of active projects and important folders
+- `glossary.md` - workspace-wide terms, acronyms, aliases, and phrase meanings
 - `dependencies/active.md` - current cross-project dependencies
 - `templates/` - reusable Markdown templates for common workspace files
 
@@ -28,6 +29,7 @@ README.md
 STATUS.md
 TASKS.md
 INDEX.md
+glossary.md
 dependencies.md
 ```
 
@@ -37,9 +39,12 @@ When starting work:
 
 1. Read root `STATUS.md`.
 2. Read root `INDEX.md`.
-3. Identify the relevant project.
-4. Read the project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
-5. Read deeper files only when the task requires them.
+3. Read root `dependencies/active.md` when work may affect multiple projects.
+4. Read root `glossary.md` when terminology, acronyms, aliases, or phrase meanings matter.
+5. Identify the relevant project.
+6. Read the project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
+7. Read the project's `glossary.md` when terminology, acronyms, aliases, or phrase meanings matter.
+8. Read deeper files only when the task requires them.
 
 Prefer loading short current-state files before historical folders.
 
@@ -52,10 +57,12 @@ High-priority templates include:
 - `templates/workspace-README.md`
 - `templates/workspace-STATUS.md`
 - `templates/workspace-INDEX.md`
+- `templates/workspace-glossary.md`
 - `templates/project-README.md`
 - `templates/project-STATUS.md`
 - `templates/project-TASKS.md`
 - `templates/project-INDEX.md`
+- `templates/project-glossary.md`
 - `templates/project-dependencies.md`
 - `templates/dependencies-active.md`
 - `templates/dependencies-dependency-map.md`
@@ -124,8 +131,10 @@ When updating Markdown after ingestion:
 - Update `STATUS.md` if the current project state changed.
 - Update `TASKS.md` if there are new, completed, changed, or blocked tasks.
 - Update `INDEX.md` if new important files or folders were added.
+- Update `glossary.md` if the material introduces or clarifies important project-specific terminology.
 - Update `dependencies.md` if the material introduces or changes dependencies.
 - Update root `STATUS.md`, root `INDEX.md`, or `dependencies/` only if the information affects multiple projects or portfolio-level tracking.
+- Update root `glossary.md` only if terminology applies across multiple projects or the whole workspace.
 
 Preserve the original source file where possible. Do not copy long source content into status files; summarize the operational implications and link to the stored source or detailed note.
 
@@ -138,9 +147,10 @@ When answering status queries:
 1. Read root `STATUS.md` and `INDEX.md`.
 2. Identify the requested project or project set.
 3. Read each relevant project's `STATUS.md`, `TASKS.md`, `INDEX.md`, and `dependencies.md`.
-4. Read deeper files only when needed to answer the question.
-5. Summarize the current state clearly and distinguish facts from assumptions.
-6. Mention stale, missing, or contradictory project files if they affect confidence.
+4. Read root or project `glossary.md` when the question depends on terminology, acronyms, aliases, or phrase meanings.
+5. Read deeper files only when needed to answer the question.
+6. Summarize the current state clearly and distinguish facts from assumptions.
+7. Mention stale, missing, or contradictory project files if they affect confidence.
 
 Use `templates/reporting/` when creating formal status reports, dashboards, roadmaps, milestone summaries, risk summaries, open-question lists, Kanban views, or Gantt views. Treat reporting files as summaries or display layers; do not let them replace canonical task, status, dependency, or decision files.
 
@@ -182,9 +192,11 @@ Keep these files short and current:
 
 - root `STATUS.md`
 - root `INDEX.md`
+- root `glossary.md`
 - project `STATUS.md`
 - project `TASKS.md`
 - project `INDEX.md`
+- project `glossary.md`
 - project `dependencies.md`
 
 Append or archive detailed history in:
@@ -221,6 +233,18 @@ Use the root `dependencies/` folder for cross-project dependencies:
 
 When a task affects another project, update both the local project dependency file and the relevant cross-project dependency view.
 
+## Glossaries
+
+Use root `glossary.md` for workspace-wide terms, acronyms, aliases, and phrases that have the same meaning across projects.
+
+Use project-level `glossary.md` for terminology that is specific to one project.
+
+When ingesting or updating material:
+
+- Add or update glossary entries when a term's meaning affects interpretation, status, tasks, dependencies, decisions, or sources.
+- Prefer concise definitions and list common synonyms or aliases in the same entry.
+- Do not duplicate project-specific definitions in the root glossary unless they apply across the workspace.
+
 ## Decision Sources
 
 Use `decision-sources/` for references that shape project decisions, including papers, websites, internal docs, datasets, and stakeholder notes.
@@ -238,6 +262,7 @@ README.md
 STATUS.md
 TASKS.md
 INDEX.md
+glossary.md
 dependencies.md
 ```
 

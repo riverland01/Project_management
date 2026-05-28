@@ -12,6 +12,7 @@ Briefly describe what this project management workspace is for and what kinds of
 
 - `STATUS.md` - current portfolio-level status
 - `INDEX.md` - map of active projects and important folders
+- `glossary.md` - workspace-wide terms, acronyms, aliases, and phrase meanings
 - `AGENTS.md` - global agent working rules
 - `CLAUDE.md` - Claude Code bridge, if used
 
@@ -20,7 +21,7 @@ Briefly describe what this project management workspace is for and what kinds of
 - `projects/` - project-specific state and working files
 - `dependencies/` - cross-project dependencies
 - `views/` - optional portfolio dashboards and visual views
-- `shared/` - shared style guides, glossary, contacts, and reusable prompts
+- `shared/` - shared style guides, contacts, and reusable prompts
 - `templates/` - reusable Markdown templates
 
 ## Operating Notes

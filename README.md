@@ -12,6 +12,7 @@ This workspace is a Markdown-first project management system for tracking multip
 
 - `STATUS.md` - current portfolio-level status
 - `INDEX.md` - map of active projects and important folders
+- `glossary.md` - shared terms, acronyms, aliases, and phrase meanings
 - `AGENTS.md` - global agent working rules
 - `CLAUDE.md` - Claude Code bridge
 

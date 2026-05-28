@@ -10,6 +10,7 @@ Last updated: YYYY-MM-DD
 
 - `README.md` - workspace overview
 - `STATUS.md` - current portfolio-level status
+- `glossary.md` - workspace-wide terminology and aliases
 - `AGENTS.md` - global agent working rules
 - `CLAUDE.md` - Claude Code bridge, if used
 

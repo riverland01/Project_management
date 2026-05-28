@@ -29,6 +29,7 @@ Out of scope:
 - `STATUS.md` - current project state
 - `TASKS.md` - active and near-future tasks
 - `INDEX.md` - project navigation
+- `glossary.md` - project-specific terms, acronyms, aliases, and phrase meanings
 - `dependencies.md` - project dependencies
 
 ## Operating Notes
