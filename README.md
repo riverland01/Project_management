@@ -21,9 +21,12 @@ This workspace is a Markdown-first project management system for tracking multip
 - `projects/` - project-specific state and working files
 - `dependencies/` - cross-project dependencies
 - `templates/` - reusable Markdown templates
+- `maintenance/` - lint and handoff policies, exceptions, and review history
 
 ## Operating Notes
 
 - Start each new project with the minimum overlay: `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, and `dependencies.md`.
 - Keep root and project current-state files concise.
 - Put detailed history, source material, decisions, blockers, and feedback in the appropriate project folders.
+- Use [the lint procedure](maintenance/lint-sop.md) for workspace health checks. It is agent-assisted; no automated checker is installed yet.
+- Follow [the handoff policy](maintenance/handoff-policy.md) to checkpoint ingestion batches and preserve continuation context when work transfers or a long conversation ends with unfinished work.

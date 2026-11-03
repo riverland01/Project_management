@@ -48,6 +48,8 @@ When starting work:
 
 Prefer loading short current-state files before historical folders.
 
+When resuming unfinished work, follow `maintenance/handoff-policy.md` and locate the applicable workstream's handoff through the relevant `INDEX.md`.
+
 ## Templates
 
 Use the Markdown templates in `templates/` when creating new workspace-level files, project-level files, or cross-project dependency files.
@@ -91,6 +93,8 @@ Reporting templates live in `templates/reporting/`:
 - `templates/reporting/milestones.md`
 - `templates/reporting/risks.md`
 - `templates/reporting/open-questions.md`
+- `templates/reporting/lint-report.md`
+- `templates/reporting/handoff.md`
 
 When copying a template, replace placeholders, remove sections that do not apply, and keep current-state files concise. If an existing file is missing important sections from its template, update it gently without rewriting unrelated content.
 
@@ -178,6 +182,14 @@ For portfolio-level summaries, include when relevant:
 - Decisions needed from the user
 
 Prefer concise summaries with links to source Markdown files. Do not over-read historical folders unless the user asks for background, audit trail, or detailed chronology.
+
+## Workspace Lint
+
+For workspace health checks, follow `maintenance/lint-sop.md`. It defines a manual structural and judgment review, finding triage, exceptions, and reporting. Use `templates/reporting/lint-report.md` for saved runs. Automated commands are proposed separately in the SOP and are not installed yet.
+
+## Checkpoints And Handoff
+
+Follow `maintenance/handoff-policy.md` for ingestion checkpoints, long conversations, transfers, and resumption. Use `templates/reporting/handoff.md` for full handoffs. Keep project state in canonical files and continuation details in linked, dated records.
 
 ## Current State vs History
 

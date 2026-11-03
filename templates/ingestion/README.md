@@ -24,4 +24,5 @@ For flexible sources such as email threads and PowerPoint decks, keep the sectio
 - Extract tasks, decisions, blockers, risks, dependencies, and open questions.
 - Update current-state files only with concise operational summaries.
 - Put detailed historical notes in the relevant project-log or docs folder.
+- Follow [the handoff policy](../../maintenance/handoff-policy.md) at ingestion batch boundaries and when unfinished work needs a full handoff.
 

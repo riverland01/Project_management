@@ -17,6 +17,8 @@ Reporting templates should summarize current state clearly and link back to sour
 - `milestones.md`
 - `risks.md`
 - `open-questions.md`
+- `lint-report.md` - workspace or project health review; procedure in `maintenance/lint-sop.md`
+- `handoff.md` - continuation note; active policy in `maintenance/handoff-policy.md`
 
 ## Reporting Rules
 
