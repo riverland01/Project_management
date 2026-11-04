@@ -135,7 +135,7 @@ When updating Markdown after ingestion:
 - Update `STATUS.md` if the current project state changed.
 - Update `TASKS.md` if there are new, completed, changed, or blocked tasks.
 - Update `INDEX.md` if new important files or folders were added.
-- Update `glossary.md` if the material introduces or clarifies important project-specific terminology.
+- Update `glossary.md` only if the material introduces or clarifies a term, acronym, alias, or phrase meaning; put operational updates in status, task, dependency, or log files.
 - Update `dependencies.md` if the material introduces or changes dependencies.
 - Update root `STATUS.md`, root `INDEX.md`, or `dependencies/` only if the information affects multiple projects or portfolio-level tracking.
 - Update root `glossary.md` only if terminology applies across multiple projects or the whole workspace.
@@ -196,20 +196,21 @@ Follow `maintenance/handoff-policy.md` for ingestion checkpoints, long conversat
 Use this rule:
 
 ```text
-Root and project-level files answer what is true now.
-Folder files preserve what happened over time.
+Status, task, and dependency files answer what is true now.
+Indexes provide navigation; glossaries define terms without carrying status.
+Folder files preserve detailed records and history.
 ```
 
 Keep these files short and current:
 
 - root `STATUS.md`
 - root `INDEX.md`
-- root `glossary.md`
 - project `STATUS.md`
 - project `TASKS.md`
 - project `INDEX.md`
-- project `glossary.md`
 - project `dependencies.md`
+
+Keep root and project `glossary.md` files concise as dictionaries. Update them when meanings change, not when project progress changes.
 
 Append or archive detailed history in:
 
@@ -251,11 +252,18 @@ Use root `glossary.md` for workspace-wide terms, acronyms, aliases, and phrases 
 
 Use project-level `glossary.md` for terminology that is specific to one project.
 
+Glossaries are dictionaries. They answer "What does this term mean?" and do not carry project or portfolio status.
+
 When ingesting or updating material:
 
-- Add or update glossary entries when a term's meaning affects interpretation, status, tasks, dependencies, decisions, or sources.
-- Prefer concise definitions and list common synonyms or aliases in the same entry.
+- Include only the term, acronym expansion, synonyms or aliases, concise definition, and optional stable usage clarification or definition source.
+- Add or revise an entry only when terminology is introduced, clarified, or redefined. A progress update alone is not a glossary change.
+- Exclude current progress, task completion, owners or assignments, due dates, milestone outcomes, blockers, risks, dependency state, approval state, next actions, and decision history. A term such as "Blocked" may be defined generically; do not record which project is blocked.
+- Put current state in `STATUS.md`, actions in `TASKS.md`, dependencies in dependency files, and decisions or detailed history in the appropriate project log. Use `INDEX.md` for navigation.
+- For mixed content, keep only the definition in the glossary and route operational information to its canonical file, preserving the source or history link. Do not duplicate the operational information in both places.
 - Do not duplicate project-specific definitions in the root glossary unless they apply across the workspace.
+
+Example: "Validation: checking a deliverable against agreed requirements" is a definition. "Validation is complete; review is due Friday" belongs in status and task files. A glossary's `Last updated:` date describes dictionary maintenance only; it is not a project status date.
 
 ## Decision Sources
 

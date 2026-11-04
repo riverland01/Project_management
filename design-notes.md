@@ -198,7 +198,7 @@ Top-level files describe the whole workspace:
 - `glossary.md` defines workspace-wide terms, acronyms, aliases, and phrases.
 - `AGENTS.md` gives global working rules.
 
-Each project gets its own local state:
+Each project gets its own local management and reference files:
 
 - `README.md` for project overview.
 - `STATUS.md` for current project state.
@@ -217,8 +217,9 @@ Short current-state files:
 
 - `STATUS.md`
 - `TASKS.md`
-- `INDEX.md`
-- `glossary.md`
+- `dependencies.md`
+
+Keep `INDEX.md` short for navigation and `glossary.md` short as a dictionary. Glossaries are reference files, not project status files.
 
 Historical or detailed material is split into folders:
 
@@ -232,8 +233,9 @@ Historical or detailed material is split into folders:
 The rule is:
 
 ```text
-Root files answer what is true now.
-Folder files preserve what happened over time.
+Status, task, and dependency files answer what is true now.
+Indexes provide navigation; glossaries define terms without carrying status.
+Folder files preserve detailed records and history.
 ```
 
 ## Existing Project Migration
@@ -325,7 +327,13 @@ Use root `glossary.md` for terms that have the same meaning across the workspace
 
 Use `projects/<project>/glossary.md` for terms that are specific to a single project.
 
-Glossary entries should stay concise and include common synonyms or alternate phrases when they help agents connect source material to canonical project language.
+Glossaries answer "What does this term mean?" Include the term, acronym expansion, aliases, concise definition, and optional stable usage clarification or definition source. They do not carry project or portfolio status.
+
+Do not store progress, completion, assignments, due dates, milestone outcomes, blockers, risks, dependency state, approvals, next actions, or decision history in glossary entries. Defining a status label such as "Blocked" is useful; recording that a particular project is blocked is operational state.
+
+Update a glossary when a meaning is introduced, clarified, or redefined, not when work advances. Its `Last updated:` date tracks dictionary maintenance only. If source material mixes definitions with updates, extract the definition into the glossary and route the updates to `STATUS.md`, `TASKS.md`, dependency files, or the appropriate project log. Do not duplicate status in the dictionary.
+
+The glossary templates use definition-specific fields rather than unrestricted notes. The lint procedure checks this separation during judgment review.
 
 ## Analysis Work
 
@@ -378,7 +386,7 @@ High-priority templates:
 
 Use these templates when creating new workspace-level files, new project overlay files, or cross-project dependency files. When applying a template to an existing project, preserve useful existing content and add only the sections that improve clarity.
 
-For a brand-new project, prefer copying `templates/project-template/` to `projects/<project-name>/` and then replacing placeholders. The scaffold includes the standard current-state files plus lightweight README or placeholder files in nested folders so the intended structure is trackable and self-documenting.
+For a brand-new project, prefer copying `templates/project-template/` to `projects/<project-name>/` and then replacing placeholders. The scaffold includes the standard management and dictionary files plus lightweight README or placeholder files in nested folders so the intended structure is trackable and self-documenting.
 
 ## Ingestion Templates
 
@@ -445,4 +453,4 @@ The intended workflow is:
 5. Read root or project `glossary.md` when terminology, acronyms, aliases, or phrase meanings matter.
 6. Read the project's `dependencies.md` when dependencies may affect the answer or update.
 7. Load deeper files only when the task requires them.
-8. Update current-state files and append detailed history to the appropriate folder.
+8. Update current-state files and append detailed history to the appropriate folder; update glossaries only for terminology changes.

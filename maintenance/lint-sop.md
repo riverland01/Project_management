@@ -1,6 +1,6 @@
 # Workspace Lint Procedure
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 
 ## Purpose And Availability
 
@@ -93,7 +93,7 @@ The scope is **clear** when all applicable checks were completed and no unresolv
 
 ## Scope And Severity
 
-Current-state scope includes root `STATUS.md`, `INDEX.md`, `glossary.md`, dependency current files, and each real project's six overlay files. Include active blocker/feedback registers when present. A folder under `templates/project-template/` is a template, not a real project.
+Review scope includes root `STATUS.md`, `INDEX.md`, `glossary.md`, dependency current files, and each real project's six overlay files. Glossaries are dictionary references within this scope, not project status files. Include active blocker/feedback registers when present. A folder under `templates/project-template/` is a template, not a real project.
 
 - **Error:** a confirmed defect that breaks navigation or could materially misstate active project state.
 - **Warning:** a probable defect, missing context, or maintenance risk needing review.
@@ -110,12 +110,12 @@ These are manual checks today. Exact file/date checks are good automation candid
 | S01 | Error | Required root navigation/state files exist. Each real project normally has `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, `glossary.md`, and `dependencies.md`; a missing overlay file is a warning until its migration or dormant status is understood. Optional deeper folders are not required. |
 | S02 | Error | Explicit local Markdown links resolve to the intended file, folder, or supported heading anchor. Ignore fenced examples and external URLs. Missing local targets are errors; uncertain anchor-rendering behavior is a warning. Backticked paths are advisory evidence, not automatically links. |
 | S03 | Warning | A document has a clear title, sensible heading hierarchy, readable lists, and consistent table columns. Ignore code fences, escaped pipes, and pipes inside inline code. Formatting becomes an error only if it loses or changes meaning. |
-| S04 | Warning | A dated current-state file has a real calendar date in `Last updated:` and no future review date. Cover the root/project status, index, glossary, task, and dependency files that use this field. Do not require dates on every README, source original, or historical note. |
+| S04 | Warning | A dated current-state or dictionary file has a real calendar date in `Last updated:` and no future review date. Cover the root/project status, index, glossary, task, and dependency files that use this field. Do not require dates on every README, source original, or historical note. |
 | S05 | Warning | Active project `STATUS.md` or `TASKS.md` is more than 30 days old, or older than relevant newly ingested evidence. Age signals a review need, not proof the content is false. Paused/dormant projects and an empty workspace are reviewed in context. Record any threshold override. |
 | S06 | Warning | A live copied template still has unfilled dates, option lists, author instructions, or empty operational fields. Inspect context: `TBD` may truthfully record an unknown. It remains a visible gap when action depends on it, rather than an invented value or automatic error. |
 | S07 | Error | Each real project is reachable from root `INDEX.md` and represented in root `STATUS.md`, directly or through an explicit dormant/archived grouping. Empty-workspace rows are not projects. |
 | S08 | Warning | Every active cross-project dependency is traceable in the root register and both projects' dependency files. Compare its identity, direction, status, and evidence, not exact wording. Confirmed status contradictions escalate to errors. No new ID convention is imposed. |
-| S09 | Info | A current-state file exceeds about 150 lines, completed tasks accumulate, or a log grows difficult to load. This is a review prompt, not a hard cap or permission to archive automatically. |
+| S09 | Info | A current-state or dictionary file exceeds about 150 lines, completed tasks accumulate, or a log grows difficult to load. This is a review prompt, not a hard cap or permission to archive automatically. |
 | S10 | Warning | Exception rows are complete, narrowly scoped, and within their review date. Expired rows stop suppressing findings; unused rows need review. |
 
 Preserve existing LF or CRLF line endings. There is no repository line-ending policy today. Generic line-length rules, bare-URL bans, blanket trailing-space removal, and prose style preferences are outside this procedure; Markdown trailing spaces can encode a line break.
@@ -129,7 +129,7 @@ Preserve existing LF or CRLF line endings. There is no repository line-ending po
 | J03 | Missing operational follow-up | Decisions, blockers, feedback, and source actions that should have a task, owner, resolution, or dependency record. Unknown owners remain unknown. |
 | J04 | Overdue outcomes | Past milestone or task targets without a recorded outcome. Ask whether completed, delayed, cancelled, or still unknown; do not infer failure from the date alone. |
 | J05 | Navigation and provenance | Important working files reachable through project indexes; claims and decisions traceable to stored sources or notes. Flag inaccessible evidence without altering originals. |
-| J06 | Duplication and glossary drift | Conflicting definitions or rules; `CLAUDE.md` duplicating `AGENTS.md`; template copies drifting; views disagreeing with canonical tasks. Similar wording alone is not a defect. |
+| J06 | Duplication and glossary drift | Conflicting definitions or rules; `CLAUDE.md` duplicating `AGENTS.md`; template copies drifting; views disagreeing with canonical tasks. Check that glossary entries contain meanings and stable usage or definition sources only. Flag progress, assignments, dates for work, blockers, approvals, dependency state, next actions, or decision history in a glossary; route these to canonical state files or logs. Generic definitions of status labels and dictionary maintenance dates are allowed. Similar wording alone is not a defect. |
 | J07 | Current state versus history | Dated narrative and old completed work obscuring the next action. Recommend a minimal move with links, preserving evidence and existing legacy layout. |
 | J08 | Design gaps and suggestions | Optional paths presented as existing files, unclear template guidance, or useful unanswered questions. Separate observed defects from suggestions. No new web research or project is automatically triggered. |
 
