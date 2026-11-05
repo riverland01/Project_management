@@ -4,6 +4,8 @@ Last updated: YYYY-MM-DD
 
 This is the canonical register of project responsibilities. The project README links here. Organizational titles belong in `shared/contacts.md` when tracked; link to that register rather than copying title fields. Use a consistent full name and stable disambiguator when necessary.
 
+Use claim tags in source cells or beside specific fields under `maintenance/claim-sources.md`, for example `[src: <note filename>; certainty: Confirmed; by: <claim author>]` or `[verbal: <name>, <date>; certainty: Proposed]`. Distinguish confirmed assignments from proposed ones; a source tag alone is not approval.
+
 ## Current Project Roles
 
 Use one row per person, role, and scope; concurrent roles can have separate rows. Record `Vacant` or `Unknown` if a responsibility remains without a confirmed holder. Keep effective and recorded dates distinct; unknown effective dates remain `Unknown`.

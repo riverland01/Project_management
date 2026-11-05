@@ -8,6 +8,8 @@ Source: `<stored-path-or-link>`
 Evidence status: Confirmed current / Confirmed future / Proposed / Conflicting
 Canonical register(s): `<path-or-link>`
 
+Use claim tags under `maintenance/claim-sources.md` for role, effective-date, and authority claims. Preserve verbal provenance even when recorded in this written note; Evidence status does not replace claim-level certainty.
+
 ## Assignment Change
 
 Use the same full name or stable identity reference as the register. Record additions, endings, and transfers explicitly; do not infer project responsibilities from organizational titles. Remove unused template choices.

@@ -4,6 +4,8 @@ Last updated: YYYY-MM-DD
 
 Use as `shared/contacts.md` when affiliations or titles need tracking. This is the canonical organizational-role register; project responsibilities belong in each project's stakeholder register. Use one row per current person, role, and organization. Add rows only from evidence.
 
+Use claim tags in source cells or beside specific fields under `maintenance/claim-sources.md`, for example `[src: <note filename>; certainty: Confirmed; by: <claim author>]` or `[verbal: <name>, <date>; certainty: Proposed]`. Distinguish confirmed assignments from proposed ones; a source tag alone is not approval.
+
 ## Current Organizational Roles
 
 | Person | Organization / Unit | Organizational Role | Effective From | Recorded | Source / Change Record |

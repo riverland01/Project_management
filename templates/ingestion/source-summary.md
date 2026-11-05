@@ -12,7 +12,7 @@ Summarize the source and why it matters to the project.
 
 ## Key Facts
 
-- Fact:
+- Fact: `<source tag; include certainty and claim author when relevant>`
 
 ## Project Implications
 

@@ -6,7 +6,7 @@ Work state: Complete / Partial / Blocked
 Handoff readiness: Ready / Partial; explain any limitation
 Git revision: <revision or unavailable>
 
-Use the [handoff policy](../../maintenance/handoff-policy.md). Remove unused sections and placeholders. This is a dated continuation note; canonical files retain project state.
+Use the [handoff policy](../../maintenance/handoff-policy.md). Remove unused sections and placeholders. This is a dated continuation note; canonical files retain project state. Preserve claim source tags, certainty, and attribution under `maintenance/claim-sources.md`; a handoff does not upgrade a proposal or verbal report to confirmation.
 
 ## Objective And Scope
 

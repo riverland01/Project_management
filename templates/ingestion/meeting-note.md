@@ -15,7 +15,7 @@ Briefly summarize the meeting outcome and why it matters.
 
 ## Key Discussion Points
 
-- Point:
+- Point: `<source tag or verbal tag with speaker and statement date>`
 
 ## Decisions
 

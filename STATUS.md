@@ -32,5 +32,6 @@ The workspace structure includes root current-state files, glossary support, dep
 ## Notes
 
 - Use `templates/project-template/` when creating new project folders. It includes a stakeholder register; organizational contact and role-change templates are also available. No live people or assignments are recorded yet.
+- Project recent-summary guidance now caps entries at 5 and preserves dated history; the claim-source policy defines written/verbal tags, certainty, and attribution. No active project entries need trimming.
 - Use root `glossary.md` for workspace-wide terminology and project `glossary.md` files for project-specific terms.
 - Use [the handoff policy](maintenance/handoff-policy.md) for checkpoints and continuation, and [the lint procedure](maintenance/lint-sop.md) for scoped health checks. No automated checker or scheduler is installed.

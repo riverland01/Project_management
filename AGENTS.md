@@ -83,6 +83,7 @@ Ingestion templates live in `templates/ingestion/`:
 - `templates/ingestion/blocker-record.md`
 - `templates/ingestion/feedback-record.md`
 - `templates/ingestion/role-change-record.md`
+- `templates/ingestion/claim-note.md`
 
 Reporting templates live in `templates/reporting/`:
 
@@ -145,7 +146,7 @@ When updating Markdown after ingestion:
 - Update root `STATUS.md`, root `INDEX.md`, or `dependencies/` only if the information affects multiple projects or portfolio-level tracking.
 - Update root `glossary.md` only if terminology applies across multiple projects or the whole workspace.
 
-Preserve the original source file where possible. Do not copy long source content into status files; summarize the operational implications and link to the stored source or detailed note.
+Preserve the original source file where possible. Do not copy long source content into status files; summarize the operational implications and link to the stored source or detailed note. Apply the Recent Changes Cap and Claim Sources rules below when updating summaries and important claims.
 
 ### 2. Querying Project Status
 
@@ -238,6 +239,20 @@ When updating tasks:
 - Keep active and near-future tasks visible.
 - Move completed or obsolete details into the appropriate log or archive.
 - Do not backfill every historical task unless asked.
+
+## Recent Changes Cap
+
+Keep at most **5 entries**, newest first, in each project's `STATUS.md` Recent Changes section. Apply the same cap to `TASKS.md` Done Recently and project report Recent Progress summaries when creating or updating them. Each entry covers one meaningful change or completed task; do not hide additional entries in nested lists or merge unrelated events to evade the cap. Dates and source tags belong on each entry. Guidance text, section headings, and the history-navigation link do not count as entries.
+
+Before adding a sixth entry, ensure the oldest entry's meaningful details, completion outcome, dates, and source tags are preserved in a dated record under `project-log/changelog/` or an existing dated source/decision note discoverable through the project index or changelog. Reuse adequate records instead of duplicating them. Then remove the oldest summary entry. Keep a history link outside the capped list; retain stable task references when moving completed details.
+
+The cap limits recent summaries only. Do not remove unresolved work, blockers, risks, decisions needed, or dependency information merely because it is old. Full dated history is retained. Finalized historical reports are snapshots and are not trimmed retroactively. Apply this during each relevant project update and checkpoint; the manual lint procedure checks the cap.
+
+## Claim Sources
+
+Follow [Claim Sources And Attribution](maintenance/claim-sources.md) for important claims about status, ownership, roles, authority, commitments, dates, outcomes, scope, blockers, dependencies, risks, and estimates. Attach `[src: <note filename>]` for written evidence or `[verbal: <name>, <date>]` for spoken evidence next to the claim. Optional `certainty:` and `by:` fields belong inside the tag; certainty values are Confirmed, Proposed, Pending, Open, or Estimate. Missing certainty does not mean Confirmed.
+
+Read or capture evidence in a dated source/claim note; preserve the original source and distinguish claim author from recorder, owner, and approver. Keep unknowns and unsupported claims visibly Open or Pending; never invent evidence or upgrade a proposal to a commitment. Carry tags through current-state updates, role registers, reports, views, handoffs, and substantive status answers. The policy defines path resolution, examples, and handling of verbal evidence, conflicts, and legacy claims. Glossaries remain dictionaries.
 
 ## Dependencies
 

@@ -4,7 +4,7 @@ Last updated: YYYY-MM-DD
 
 ## Summary
 
-Short summary of dependencies affecting this project.
+Short summary of dependencies affecting this project. Attach source tags under `maintenance/claim-sources.md` to dependency status, owner, needed-by date, and other important claims. Put tags in Notes or next to individual fields when evidence differs.
 
 ## Incoming Dependencies
 

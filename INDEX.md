@@ -27,6 +27,7 @@ Last updated: 2026-11-05
 - `templates/project-template/` - reusable scaffold including a project stakeholder register
 - [Organizational contact template](templates/workspace-contacts.md) - create the shared register on first real use
 - [Role-change template](templates/ingestion/role-change-record.md) - dated history with effective and recorded dates
+- [Claim source policy](maintenance/claim-sources.md) - written/verbal tags, certainty, and attribution for important project claims
 - [Lint procedure](maintenance/lint-sop.md) - manual health checks and optional automation design
 - [Lint log](maintenance/lint-log.md) - saved reviews and procedure changes
 - [Handoff policy](maintenance/handoff-policy.md) - active checkpoint and continuation rules for long conversations and ingestion

@@ -71,6 +71,7 @@ workspace-root/
       blocker-record.md
       feedback-record.md
       role-change-record.md
+      claim-note.md
     reporting/
       README.md
       project-status-report.md
@@ -342,6 +343,16 @@ Update a glossary when a meaning is introduced, clarified, or redefined, not whe
 
 The glossary templates use definition-specific fields rather than unrestricted notes. The lint procedure checks this separation during judgment review.
 
+## Recent Summaries And Claim Evidence
+
+Project Recent Changes, Done Recently, and project-report Recent Progress summaries retain at most five entries, newest first. Each dated entry carries source tags. Preserve overflow details and provenance in dated changelog or existing discoverable source/decision records before removing entries; keep a history link outside the capped list. This limits summaries, not active blockers, unresolved work, or the full history. Finalized reports stay unchanged. The five-entry cap is a workspace design default selected during implementation; the user requested a cap without specifying a number.
+
+Important project claims carry `[src: <note filename>]` or `[verbal: <name>, <date>]` tags, with optional `certainty:` and `by:` fields. Certainty may be Confirmed, Proposed, Pending, Open, or Estimate; missing certainty is not confirmation. Status, ownership, roles, approval authority, scope, commitments, dates, outcomes, blockers, dependencies, risks, and estimates need traceable evidence. Distinct claims can have distinct evidence and certainty within the same row.
+
+[Claim Sources And Attribution](maintenance/claim-sources.md) defines the syntax, path resolution, authorship, certainty, source support, and legacy handling. Use `templates/ingestion/claim-note.md` for a small dated evidence record when needed; existing adequate source notes are reused. Creating a written note from a spoken statement preserves its verbal provenance. A tag or a repeated assertion does not independently verify a claim. Keep unknowns visible and preserve original historical records.
+
+The cap and evidence rules are applied by agents during updates and checked by the manual lint procedure. No automated checker is installed.
+
 ## People And Role Tracking
 
 Identity is separate from assignments. Glossaries may resolve names, initials, or aliases and define role meanings; they must not associate a person with current or former role assignments.
@@ -428,6 +439,7 @@ Ingestion templates:
 - `templates/ingestion/blocker-record.md`
 - `templates/ingestion/feedback-record.md`
 - `templates/ingestion/role-change-record.md`
+- `templates/ingestion/claim-note.md`
 
 These templates should be used when a user provides meeting notes, project initiation material, email threads, PowerPoint decks, PDFs, Word documents, or other source files for ingestion.
 

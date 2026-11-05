@@ -6,6 +6,8 @@ When the live log exceeds 30 entries, move the oldest entries into dated Markdow
 
 ## Recent
 
+- [2026-11-05] RULES workspace - capped project recent summaries at 5 entries with overflow evidence preserved; added written/verbal claim tags, certainty and claimant attribution, a claim-note template, and manual checks S11/S12 plus evidence review J05. Scoped template, tag-example, reference, and format checks only; no active project entries to trim and no automated checker installed - [claim policy](claim-sources.md), [cap](../AGENTS.md#recent-changes-cap).
+
 - [2026-11-05] RULES workspace - implemented organizational/project role registers and dated role-change templates, with effective/recorded dates, future-change handling, evidence, and downstream follow-up. Replaced scaffold README role tables with a canonical register link; shared registers remain optional until real use. Scoped consistency and reference checks only; no full lint run - [rules](../AGENTS.md#people-and-roles), [design](../design-notes.md#people-and-role-tracking).
 
 - [2026-11-04] RULES workspace - aligned glossary design, agent instructions, templates, ingestion and handoff guidance with dictionary-only use; clarified state versus reference files and added a glossary-content check to J06. Reviewed the existing dictionary and sample scaffold; no active project status needed migration. Scoped verification only; no full lint run - [design](../design-notes.md#glossaries), [rules](../AGENTS.md#glossaries).

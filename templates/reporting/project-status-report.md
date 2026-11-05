@@ -11,7 +11,7 @@ Prepared from:
 
 ## Executive Summary
 
-Short summary of the project state.
+Short summary of the project state. Carry claim-level source tags from canonical files under `maintenance/claim-sources.md`; do not treat Prepared from or a report-wide confidence rating as a substitute for claim provenance or certainty.
 
 ## Current Objective
 
@@ -25,7 +25,11 @@ Confidence: High / Medium / Low
 
 ## Recent Progress
 
-- Progress:
+Keep at most 5 entries, newest first, when authoring this report. Link dated evidence for each and point to the project changelog for older progress. Do not trim finalized historical reports.
+
+- YYYY-MM-DD — Progress: `<source tag>`
+
+History: `<link to project changelog>`
 
 ## Active Work
 
