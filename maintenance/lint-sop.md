@@ -1,6 +1,6 @@
 # Workspace Lint Procedure
 
-Last updated: 2026-11-04
+Last updated: 2026-11-05
 
 ## Purpose And Availability
 
@@ -93,7 +93,7 @@ The scope is **clear** when all applicable checks were completed and no unresolv
 
 ## Scope And Severity
 
-Review scope includes root `STATUS.md`, `INDEX.md`, `glossary.md`, dependency current files, and each real project's six overlay files. Glossaries are dictionary references within this scope, not project status files. Include active blocker/feedback registers when present. A folder under `templates/project-template/` is a template, not a real project.
+Review scope includes root `STATUS.md`, `INDEX.md`, `glossary.md`, dependency current files, and each real project's six overlay files. Glossaries are dictionary references within this scope, not project status files. Include active blocker/feedback and contact/stakeholder registers when present. Role registers are optional beyond the minimum overlay; their absence is not automatically a defect. A folder under `templates/project-template/` is a template, not a real project.
 
 - **Error:** a confirmed defect that breaks navigation or could materially misstate active project state.
 - **Warning:** a probable defect, missing context, or maintenance risk needing review.
@@ -124,12 +124,12 @@ Preserve existing LF or CRLF line endings. There is no repository line-ending po
 
 | ID | Review | Evidence to compare |
 | --- | --- | --- |
-| J01 | Contradictions | Project status against tasks, active blockers, dependencies, and portfolio summaries. A serious blocker is a review trigger, not automatic proof the whole project is blocked. |
+| J01 | Contradictions | Project status against tasks, active blockers, dependencies, and portfolio summaries. Compare current role registers with dated assignment records and sources; check identity and scope, effective versus recorded dates, future changes kept out of current rows, and affected task/approval follow-up. Do not infer project-role changes from organizational titles. Preserve unknown dates and flag conflicting evidence. A serious blocker is a review trigger, not automatic proof the whole project is blocked. |
 | J02 | Stale or superseded claims | Current summaries against the relevant newer decision, meeting note, changelog, or source summary. State what the newer evidence actually establishes. |
 | J03 | Missing operational follow-up | Decisions, blockers, feedback, and source actions that should have a task, owner, resolution, or dependency record. Unknown owners remain unknown. |
 | J04 | Overdue outcomes | Past milestone or task targets without a recorded outcome. Ask whether completed, delayed, cancelled, or still unknown; do not infer failure from the date alone. |
 | J05 | Navigation and provenance | Important working files reachable through project indexes; claims and decisions traceable to stored sources or notes. Flag inaccessible evidence without altering originals. |
-| J06 | Duplication and glossary drift | Conflicting definitions or rules; `CLAUDE.md` duplicating `AGENTS.md`; template copies drifting; views disagreeing with canonical tasks. Check that glossary entries contain meanings and stable usage or definition sources only. Flag progress, assignments, dates for work, blockers, approvals, dependency state, next actions, or decision history in a glossary; route these to canonical state files or logs. Generic definitions of status labels and dictionary maintenance dates are allowed. Similar wording alone is not a defect. |
+| J06 | Duplication and glossary drift | Conflicting definitions or rules; `CLAUDE.md` duplicating `AGENTS.md`; template copies drifting; views disagreeing with canonical tasks. Check that glossary entries contain meanings and stable usage or definition sources only. Flag progress, assignments, dates for work, blockers, approvals, dependency state, next actions, or decision history in a glossary; route these to canonical state files or logs. Names and aliases for identity disambiguation are allowed, but current or former role assignments belong in registers or dated history. Project READMEs should link to canonical stakeholder registers rather than duplicating roles. Generic role/status definitions and dictionary maintenance dates are allowed. Similar wording alone is not a defect. |
 | J07 | Current state versus history | Dated narrative and old completed work obscuring the next action. Recommend a minimal move with links, preserving evidence and existing legacy layout. |
 | J08 | Design gaps and suggestions | Optional paths presented as existing files, unclear template guidance, or useful unanswered questions. Separate observed defects from suggestions. No new web research or project is automatically triggered. |
 

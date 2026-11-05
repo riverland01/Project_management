@@ -1,6 +1,6 @@
 # Workspace Index
 
-Last updated: 2026-11-03
+Last updated: 2026-11-05
 
 ## Active Projects
 
@@ -24,7 +24,9 @@ Last updated: 2026-11-03
 ## Current Working Files
 
 - `design-notes.md` - structure rationale and final target layout
-- `templates/project-template/` - reusable scaffold for new projects
+- `templates/project-template/` - reusable scaffold including a project stakeholder register
+- [Organizational contact template](templates/workspace-contacts.md) - create the shared register on first real use
+- [Role-change template](templates/ingestion/role-change-record.md) - dated history with effective and recorded dates
 - [Lint procedure](maintenance/lint-sop.md) - manual health checks and optional automation design
 - [Lint log](maintenance/lint-log.md) - saved reviews and procedure changes
 - [Handoff policy](maintenance/handoff-policy.md) - active checkpoint and continuation rules for long conversations and ingestion

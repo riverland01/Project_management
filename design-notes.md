@@ -41,6 +41,7 @@ workspace-root/
   shared/
     styleguide.md
     contacts.md
+    role-changes/
     reusable-prompts.md
 
   templates/
@@ -55,6 +56,8 @@ workspace-root/
     project-INDEX.md
     project-glossary.md
     project-dependencies.md
+    workspace-contacts.md
+    project-stakeholders.md
     dependencies-active.md
     dependencies-dependency-map.md
     ingestion/
@@ -67,6 +70,7 @@ workspace-root/
       decision-record.md
       blocker-record.md
       feedback-record.md
+      role-change-record.md
     reporting/
       README.md
       project-status-report.md
@@ -89,6 +93,7 @@ workspace-root/
       dependencies.md
       planning/
       docs/
+        stakeholders.md
       project-log/
       decision-sources/
       deliverables/
@@ -117,6 +122,7 @@ workspace-root/
 
       docs/
         project-brief.md
+        stakeholders.md
         meeting-notes/
           README.md
         reviews/
@@ -167,13 +173,14 @@ workspace-root/
       views/
       planning/
       docs/
+        stakeholders.md
       project-log/
       decision-sources/
       deliverables/
       analysis/
 ```
 
-The current scaffold includes the required root files, including root `glossary.md`, plus `dependencies/`, `projects/`, `templates/`, and `templates/project-template/`. Workspace-level `views/` and `shared/` are intentionally deferred until they become useful.
+The current scaffold includes the required root files, including root `glossary.md`, plus `dependencies/`, `projects/`, `templates/`, and `templates/project-template/`. Workspace-level `views/` and `shared/` are deferred until useful. Organizational contact and role-history templates are available for first use; the project scaffold includes a stakeholder register.
 
 ## Why This Structure
 
@@ -233,9 +240,9 @@ Historical or detailed material is split into folders:
 The rule is:
 
 ```text
-Status, task, and dependency files answer what is true now.
+Status, task, dependency, and role registers answer what is true now.
 Indexes provide navigation; glossaries define terms without carrying status.
-Folder files preserve detailed records and history.
+Logs and dated records preserve history; a register in a folder can still hold current state.
 ```
 
 ## Existing Project Migration
@@ -335,6 +342,22 @@ Update a glossary when a meaning is introduced, clarified, or redefined, not whe
 
 The glossary templates use definition-specific fields rather than unrestricted notes. The lint procedure checks this separation during judgment review.
 
+## People And Role Tracking
+
+Identity is separate from assignments. Glossaries may resolve names, initials, or aliases and define role meanings; they must not associate a person with current or former role assignments.
+
+- `shared/contacts.md` holds canonical organizational affiliations and titles when tracking is needed. Create it from `templates/workspace-contacts.md` on first use and link it from root `INDEX.md`.
+- `projects/<project>/docs/stakeholders.md` holds canonical project roles, responsibilities, and approval authority. Project READMEs link here instead of maintaining another role table. Organizational title fields stay in the shared register; reference them from the project register.
+- Dated role-change records preserve previous and new assignments, effective dates, recorded dates, evidence, and impacts. Use `templates/ingestion/role-change-record.md`. Organizational history goes in `shared/role-changes/`; project history uses the existing `project-log/changelog/`. A change affecting both scopes has one primary record linked from affected registers.
+
+Use consistent full names with stable disambiguation where needed. Keep one current row per person, role, and scope; allow concurrent roles. Record initial assignments, endings, and vacancies explicitly without inventing successors. Effective dates describe when roles apply; recorded dates describe when information was entered. Unknown effective dates remain unknown even if evidence confirms a role is already current.
+
+Confirmed future changes remain scheduled until effective, with a follow-up task or workspace follow-up. Proposals and conflicting claims remain open questions. An organizational title change alone does not establish a project-role change or authorize task reassignment. Review affected tasks, dependencies, handovers, and approval responsibilities against the evidence.
+
+Keep history as links, preserve source originals and roles reported in old notes, and append corrections with provenance. Answer current-role questions from registers and historical-role questions from dated records. Detailed operating rules are in `AGENTS.md`, People And Roles.
+
+Registers remain optional beyond the six-file minimum overlay; existing projects can retain an equivalent register at an indexed canonical path. Do not create live registers with fictional people before real information needs tracking.
+
 ## Analysis Work
 
 Each project includes an `analysis/` folder because some projects may need analysis PowerPoints or supporting outputs.
@@ -381,6 +404,8 @@ High-priority templates:
 - `templates/project-INDEX.md`
 - `templates/project-glossary.md`
 - `templates/project-dependencies.md`
+- `templates/workspace-contacts.md`
+- `templates/project-stakeholders.md`
 - `templates/dependencies-active.md`
 - `templates/dependencies-dependency-map.md`
 
@@ -402,6 +427,7 @@ Ingestion templates:
 - `templates/ingestion/decision-record.md`
 - `templates/ingestion/blocker-record.md`
 - `templates/ingestion/feedback-record.md`
+- `templates/ingestion/role-change-record.md`
 
 These templates should be used when a user provides meeting notes, project initiation material, email threads, PowerPoint decks, PDFs, Word documents, or other source files for ingestion.
 

@@ -1,6 +1,6 @@
 # Workspace Glossary
 
-Last updated: 2026-11-04
+Last updated: 2026-11-05
 
 Use this dictionary for terms, acronyms, aliases, and phrases that have the same meaning across the workspace. Include definitions and stable usage clarifications only; keep project status in the appropriate status, task, dependency, or log files.
 
@@ -8,7 +8,7 @@ Use this dictionary for terms, acronyms, aliases, and phrases that have the same
 
 | Term | Also Known As | Meaning | Usage / Definition Source |
 | --- | --- | --- | --- |
-| Project current-state files | State files | Files describing current project state, actions, and dependencies: `STATUS.md`, `TASKS.md`, and `dependencies.md`. | Distinct from navigation and dictionary files. |
+| Project current-state files | State files | Core files describing current project state, actions, and dependencies: `STATUS.md`, `TASKS.md`, and `dependencies.md`. Optional role registers hold current assignments. | Distinct from navigation and dictionary files. |
 | Project overlay | Overlay files, minimum overlay | The core project management and reference files added to a project: `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, `glossary.md`, and `dependencies.md`. | An overlay can describe an existing project without reorganizing its legacy folders. |
 | Glossary | Dictionary, terminology reference | A collection of terms, acronym expansions, aliases, and definitions. | Describes meanings without carrying project or portfolio status. |
 | Decision sources | Sources, references | Materials that shape project decisions, such as papers, websites, internal documents, datasets, and stakeholder notes. | Stored in `decision-sources/`. |

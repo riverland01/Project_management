@@ -25,6 +25,8 @@ Out of scope:
 
 ## Stakeholders
 
+Capture roles as reported in this source. Apply confirmed current project assignments to `docs/stakeholders.md` and organizational titles to the shared contact register when tracked; preserve this note as dated evidence.
+
 | Name | Role | Notes |
 | --- | --- | --- |
 | TBD | TBD | TBD |

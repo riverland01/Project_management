@@ -23,6 +23,7 @@ Last updated: YYYY-MM-DD
 ## Documentation
 
 - `docs/project-brief.md`
+- [Stakeholder register](docs/stakeholders.md) - current project roles and links to assignment history
 - `docs/meeting-notes/`
 - `docs/reviews/`
 

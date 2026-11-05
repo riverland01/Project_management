@@ -44,7 +44,8 @@ When starting work:
 5. Identify the relevant project.
 6. Read the project's `STATUS.md`, `TASKS.md`, and `INDEX.md`.
 7. Read the project's `glossary.md` when terminology, acronyms, aliases, or phrase meanings matter.
-8. Read deeper files only when the task requires them.
+8. Read indexed contact/stakeholder registers when identity, roles, responsibilities, or approval authority matter.
+9. Read deeper files only when the task requires them.
 
 Prefer loading short current-state files before historical folders.
 
@@ -66,6 +67,8 @@ High-priority templates include:
 - `templates/project-INDEX.md`
 - `templates/project-glossary.md`
 - `templates/project-dependencies.md`
+- `templates/workspace-contacts.md`
+- `templates/project-stakeholders.md`
 - `templates/dependencies-active.md`
 - `templates/dependencies-dependency-map.md`
 
@@ -79,6 +82,7 @@ Ingestion templates live in `templates/ingestion/`:
 - `templates/ingestion/decision-record.md`
 - `templates/ingestion/blocker-record.md`
 - `templates/ingestion/feedback-record.md`
+- `templates/ingestion/role-change-record.md`
 
 Reporting templates live in `templates/reporting/`:
 
@@ -137,6 +141,7 @@ When updating Markdown after ingestion:
 - Update `INDEX.md` if new important files or folders were added.
 - Update `glossary.md` only if the material introduces or clarifies a term, acronym, alias, or phrase meaning; put operational updates in status, task, dependency, or log files.
 - Update `dependencies.md` if the material introduces or changes dependencies.
+- Update canonical contact/stakeholder registers and append dated role-change records when assignments change; follow People And Roles below.
 - Update root `STATUS.md`, root `INDEX.md`, or `dependencies/` only if the information affects multiple projects or portfolio-level tracking.
 - Update root `glossary.md` only if terminology applies across multiple projects or the whole workspace.
 
@@ -152,7 +157,7 @@ When answering status queries:
 2. Identify the requested project or project set.
 3. Read each relevant project's `STATUS.md`, `TASKS.md`, `INDEX.md`, and `dependencies.md`.
 4. Read root or project `glossary.md` when the question depends on terminology, acronyms, aliases, or phrase meanings.
-5. Read deeper files only when needed to answer the question.
+5. Read indexed role registers for current assignments or dated records for historical assignments when roles matter; read other deeper files only when needed.
 6. Summarize the current state clearly and distinguish facts from assumptions.
 7. Mention stale, missing, or contradictory project files if they affect confidence.
 
@@ -196,9 +201,9 @@ Follow `maintenance/handoff-policy.md` for ingestion checkpoints, long conversat
 Use this rule:
 
 ```text
-Status, task, and dependency files answer what is true now.
+Status, task, dependency, and role registers answer what is true now.
 Indexes provide navigation; glossaries define terms without carrying status.
-Folder files preserve detailed records and history.
+Logs and dated records preserve history; a register in a folder can still hold current state.
 ```
 
 Keep these files short and current:
@@ -264,6 +269,30 @@ When ingesting or updating material:
 - Do not duplicate project-specific definitions in the root glossary unless they apply across the workspace.
 
 Example: "Validation: checking a deliverable against agreed requirements" is a definition. "Validation is complete; review is due Friday" belongs in status and task files. A glossary's `Last updated:` date describes dictionary maintenance only; it is not a project status date.
+
+## People And Roles
+
+Keep identity, current assignments, and assignment history separate:
+
+- **Glossary:** names, initials, aliases, and stable identity disambiguation only when useful for interpreting material. Define role meanings generically; do not attach current or former role assignments to a person's entry.
+- **Organizational roles:** `shared/contacts.md` is the canonical register for affiliations and titles that need tracking. Create it from `templates/workspace-contacts.md` on first use and link it from root `INDEX.md`. Do not copy its title fields into each project.
+- **Project roles:** `projects/<project>/docs/stakeholders.md` is the canonical register for project roles, responsibilities, and approval authority. Use `templates/project-stakeholders.md`; project READMEs link to it instead of maintaining another role table.
+- **Role history:** use `templates/ingestion/role-change-record.md`. Project assignment changes go in `projects/<project>/project-log/changelog/YYYY-MM-DD-role-change-<person>.md`; organizational changes go in `shared/role-changes/YYYY-MM-DD-<person>.md`. Filenames use the recorded date; add a numeric suffix for collisions. Create shared folders only when needed. For a change affecting both scopes, keep one primary record linked from both registers and affected project notes.
+
+Use a consistent full name with a stable disambiguator when names collide. Initials alone or a changing role title are not sufficient identity. No mandatory person-ID scheme is required.
+
+When ingesting a role change:
+
+1. Preserve the source and establish the person, organization/project scope, previous and new assignment, effective date, and recorded date. Keep unknown values explicit. Record initial assignments too; previous assignment may be unknown or not applicable.
+2. Append a dated change record with evidence and register links. Separate confirmed changes from proposals or conflicting claims; do not overwrite an established assignment on ambiguous evidence.
+3. Update the current register when the change takes effect. Keep confirmed future changes in a scheduled section with evidence, an effective date, and a follow-up task; do not present them as current. If evidence confirms a change is already in force but its start date is unknown, update current state with `Unknown` as the effective date.
+4. Keep one current row per person, role, and scope; concurrent roles can have separate rows. Remove ended assignments from current rows after preserving them in history. Record a vacancy or unknown successor where the responsibility still exists.
+5. Review affected tasks, dependencies, handovers, and approval responsibilities. Reassign only where evidence supports it; otherwise capture a follow-up task or open question. An organizational title change does not itself prove a project-role or task-owner change.
+6. Link the change record from the register's history section and any relevant project index. Keep history as links rather than old assignments in current rows. Review only projects affected by a shared organizational change.
+
+`Effective from` describes when an assignment applies; `Recorded` describes when it was entered here. Neither is inferred from ingestion or file-modification dates. Preserve original meeting notes and source documents with the roles reported at that time. Append later corrections with source pointers rather than rewriting history. Answer current-role questions from registers and historical-role questions from dated records and sources; note stale or conflicting evidence.
+
+These registers are optional beyond the six-file minimum project overlay. Existing projects can retain a useful register at another path if their `INDEX.md` identifies it as canonical. Avoid duplicating it.
 
 ## Decision Sources
 

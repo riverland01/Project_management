@@ -1,6 +1,6 @@
 # Handoff Policy
 
-Last updated: 2026-11-04
+Last updated: 2026-11-05
 Status: Active; approved by the user on 2026-11-03.
 
 ## Purpose
@@ -42,7 +42,7 @@ Conversation length is a warning signal, not a reliable fixed message or token t
 
 ## Checkpoint Procedure
 
-1. **Reconcile current state.** Update only the affected `STATUS.md`, `TASKS.md`, `INDEX.md`, and dependency files under existing ingestion rules. Update `glossary.md` separately only for terminology changes; never put checkpoint progress or project status in the dictionary. Record important decisions and corrections in the appropriate project log. Keep root changes limited to portfolio or cross-project implications.
+1. **Reconcile current state.** Update only the affected `STATUS.md`, `TASKS.md`, `INDEX.md`, dependency files, and affected contact/stakeholder registers under existing ingestion rules. Update `glossary.md` separately only for terminology changes; never put checkpoint progress or project status in the dictionary. Record important decisions and corrections in the appropriate project log. Keep root changes limited to portfolio or cross-project implications.
 2. **Record source progress.** In the source/ingestion note, identify what is stored, read or extracted, reviewed, and applied. These are separate states. Record failures, exclusions, and unverified content.
 3. **Save the cursor.** For incomplete work, name the exact next file, page range, slide, worksheet, email message, section, or pending update. Mark what was already applied so a resuming agent does not create duplicate tasks or records.
 4. **Run a scoped check.** Check changed references, placeholders, task/status consistency, and any dependency endpoints touched. State the actual coverage using the lint SOP; do not imply a full workspace lint pass.

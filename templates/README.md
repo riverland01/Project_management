@@ -16,10 +16,12 @@ Use these templates when creating new workspace-level files, new projects, or de
 - `project-INDEX.md`
 - `project-glossary.md`
 - `project-dependencies.md`
+- `workspace-contacts.md` - organizational-role register; instantiate as `shared/contacts.md` on first use
+- `project-stakeholders.md` - canonical project-role register under `docs/`
 - `dependencies-active.md`
 - `dependencies-dependency-map.md`
 
 ## Project Scaffold
 
-- `project-template/` - copy this folder to `projects/<project-name>/` when starting a new project; it includes a project-level `glossary.md`.
+- `project-template/` - copy this folder to `projects/<project-name>/` when starting a new project; it includes a project glossary and a stakeholder register under `docs/`. Initialize the optional register when people need tracking; otherwise omit it and its navigation links.
 

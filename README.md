@@ -26,6 +26,7 @@ This workspace is a Markdown-first project management system for tracking multip
 ## Operating Notes
 
 - Start each new project with the minimum overlay: `README.md`, `STATUS.md`, `TASKS.md`, `INDEX.md`, `glossary.md`, and `dependencies.md`.
+- Track organizational titles in `shared/contacts.md` when needed and project responsibilities in `docs/stakeholders.md`; link dated role-change history from those registers. See [People And Roles](AGENTS.md#people-and-roles).
 - Keep root and project current-state files concise. Glossaries are dictionaries for meanings and aliases; keep progress, actions, and other operational state in their canonical files.
 - Put detailed history, source material, decisions, blockers, and feedback in the appropriate project folders.
 - Use [the lint procedure](maintenance/lint-sop.md) for workspace health checks. It is agent-assisted; no automated checker is installed yet.

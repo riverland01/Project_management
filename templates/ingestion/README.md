@@ -16,12 +16,15 @@ For flexible sources such as email threads and PowerPoint decks, keep the sectio
 - `decision-record.md`
 - `blocker-record.md`
 - `feedback-record.md`
+- `role-change-record.md`
 
 ## Common Ingestion Rules
 
 - Preserve or link to the original source file where possible.
 - Capture the source date, ingestion date, project, and source location.
 - Extract tasks, decisions, blockers, risks, dependencies, and open questions.
+- For role changes, separate organizational titles from project responsibilities. Update canonical registers, preserve dated records with effective and recorded dates, and review affected tasks and approvals. Follow [People And Roles](../../AGENTS.md#people-and-roles).
+- Roles reported in source summaries describe that source at its date; preserve them when later assignments change.
 - Update current-state files only with concise operational summaries.
 - Update glossaries only for terms and meanings; route progress, actions, and other operational state to status, task, dependency, or log files.
 - Put detailed historical notes in the relevant project-log or docs folder.

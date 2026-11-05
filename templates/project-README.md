@@ -20,9 +20,7 @@ Out of scope:
 
 ## Stakeholders
 
-| Name | Role | Notes |
-| --- | --- | --- |
-| TBD | TBD | TBD |
+Use [the stakeholder register](docs/stakeholders.md) for current project roles, responsibilities, approval authority, and assignment history. Keep organizational titles in the shared contact register when tracked; avoid another role table here.
 
 ## Key Files
 
